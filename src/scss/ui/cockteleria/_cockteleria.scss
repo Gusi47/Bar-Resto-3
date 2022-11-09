@@ -1,0 +1,40 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.cockteleria {
+   @include m.flex(flex, column-reverse, center, center);
+    margin: 0;
+    width: 100%;
+   @include m.telefono {
+    @include m.grid(2, 0rem);
+    height: 63rem;   
+   }
+
+
+ &__contenido {
+     @include m.flex(flex, column, center, center);
+   }
+
+   &__foto {
+       height: 63rem;
+       object-fit: cover;
+   }
+
+   h2 {
+    @include m.heading;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+
+    @include m.tablet {
+        font-size: 4rem;
+    }
+   }
+
+   &__parrafo {
+       font-size: 1.6rem;
+       line-height: 1.5;
+       padding: 3rem;
+       margin: 0;
+   }
+
+}
